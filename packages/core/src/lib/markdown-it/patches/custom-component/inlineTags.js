@@ -24,6 +24,7 @@ const inlineTags = [
   'tooltip',
   'trigger',
   'md',
+  'imagify',
 
   'a',
   'abbr',

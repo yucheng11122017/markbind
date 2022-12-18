@@ -226,6 +226,9 @@ export class NodeProcessor {
       case 'thumbnail':
         this.mdAttributeRenderer.processThumbnailAttributes(node);
         break;
+      case 'imagify': 
+        this.mdAttributeRenderer.processImagifyAttributes(node);
+        break;
       case 'page-nav':
         this.pageNavProcessor.renderPageNav(node);
         break;

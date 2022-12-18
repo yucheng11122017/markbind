@@ -173,6 +173,20 @@ class MdAttributeRenderer {
     node.children = cheerio.parseHTML(renderedText);
     delete node.attribs.text;
   }
+
+  /**
+   * Imagify
+   */
+
+  processImagifyAttributes(node) {
+    const text = _.has(node.attribs, 'text') ? node.attribs.text : ''; 
+    if (text == '') {
+      return 
+    }
+    const renderedText = this.markdownProcessor.renderMdInline(text);
+    node.children = cheerio.parseHTML(renderedText);
+    delete node.attribs.text;
+  }
 }
 
 module.exports = {
