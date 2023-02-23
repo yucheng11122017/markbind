@@ -247,8 +247,8 @@ class VariableProcessor {
     const includeVariables = VariableProcessor.extractIncludeVariables(node);
 
     const variables = {
-      ...includeVariables,
       ...context.variables,
+      ...includeVariables,
     };
 
     // Render the included content with the current <include>'s <variable>s and any parent <include>'s
