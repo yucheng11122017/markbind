@@ -73,7 +73,7 @@ The branch that will be deployed to in the remote repo.</p></li></ul></div></pan
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span>
 </span><span>        <span class="hljs-attr">with:</span>
-</span><span>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">&#x27;16&#x27;</span>
+</span><span>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">&#x27;14&#x27;</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">i</span> <span class="hljs-string">-g</span> <span class="hljs-string">markbind-cli</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">markbind</span> <span class="hljs-string">build</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">markbind</span> <span class="hljs-string">deploy</span> <span class="hljs-string">--ci</span>
@@ -324,8 +324,8 @@ If you want Travis CI to only deploy from a specific repository (eg. only from y
 </span><span>    <span class="hljs-attr">steps:</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-string">checkout</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">node/install:</span>
-</span><span>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">&quot;16&quot;</span>
-</span><span>          <span class="hljs-attr">npm-version:</span> <span class="hljs-string">&quot;8&quot;</span>
+</span><span>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">&quot;14&quot;</span>
+</span><span>          <span class="hljs-attr">npm-version:</span> <span class="hljs-string">&quot;7&quot;</span>
 </span><span>          <span class="hljs-attr">install-yarn:</span> <span class="hljs-literal">false</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">node</span> <span class="hljs-string">--version</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">i</span> <span class="hljs-string">-g</span> <span class="hljs-string">markbind-cli</span>
@@ -381,7 +381,7 @@ to automatically build and deploy your site on their platform every time your Gi
 <ul>
 <li><code class="hljs inline no-lang" v-pre>Build Command</code>: <code class="hljs inline no-lang" v-pre>npm i markbind-cli -g &amp;&amp; markbind build --baseUrl</code></li>
 <li><code class="hljs inline no-lang" v-pre>Publish directory</code>: <code class="hljs inline no-lang" v-pre>_site</code></li>
-<li><code class="hljs inline no-lang" v-pre>Show advanced</code>: Add a new variable with the key as <code class="hljs inline no-lang" v-pre>NODE_VERSION</code> and the value as <strong><code class="hljs inline no-lang" v-pre>16</code> or higher</strong></li></ul>
+<li><code class="hljs inline no-lang" v-pre>Show advanced</code>: Add a new variable with the key as <code class="hljs inline no-lang" v-pre>NODE_VERSION</code> and the value as <strong><code class="hljs inline no-lang" v-pre>14</code> or higher</strong></li></ul>
  <br>
  <span><box background-color="white" border-color="#cccccc"><span><a href="/images/netlifyPreview3.png" target="_self"><img src="/images/netlifyPreview3.png" alt="Update build settings" class="img-fluid"></a></span></box></span></li></ol>
 <p>Now your site will be deployed on Netlify at the given address specified after deployment. It will be updated automatically when the default branch of your repo is updated.</p>
@@ -434,7 +434,7 @@ to automatically build and deploy your site on their platform every time your Gi
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">Node</span>
 </span><span>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span>
 </span><span>        <span class="hljs-attr">with:</span>
-</span><span>          <span class="hljs-attr">node-version:</span> <span class="hljs-number">16</span>
+</span><span>          <span class="hljs-attr">node-version:</span> <span class="hljs-number">14</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">MarkBind</span> <span class="hljs-string">website</span>
 </span><span>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span>
 </span><span><span class="hljs-string">          npm install -g markbind-cli</span>
@@ -508,7 +508,7 @@ to automatically build and deploy your site on their platform every time your Gi
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">Node</span>
 </span><span>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span>
 </span><span>        <span class="hljs-attr">with:</span>
-</span><span>          <span class="hljs-attr">node-version:</span> <span class="hljs-number">16</span>
+</span><span>          <span class="hljs-attr">node-version:</span> <span class="hljs-number">14</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">PR</span> <span class="hljs-string">preview</span> <span class="hljs-string">url</span>
 </span><span>        <span class="hljs-attr">id:</span> <span class="hljs-string">pr-url</span>
 </span><span>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span>
